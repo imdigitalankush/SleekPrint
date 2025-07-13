@@ -1,9 +1,9 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Ankush (Sleek Print)
-TITLE:Manager
-ORG:Sleek Print
-EMAIL:info@sleekprint.com
-TEL:+91-9999199849
-ADR:;;Delhi, India
+FN:Gagan Kaushik
+ORG:Sky Infotech
+TITLE:IT Professional
+EMAIL;TYPE=INTERNET:sky.infotech@yahoo.com
+TEL;TYPE=CELL:+91-9210822700
+ADR;TYPE=HOME:;;Najafgarh, New Delhi;;;;
 END:VCARD
