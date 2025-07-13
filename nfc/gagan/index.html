@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vCard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .vcard {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      width: 300px;
+    }
+.save-contact-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s;
+    width: 90%;
+}
+
+.save-contact-btn:hover {
+  background: #218838;
+}
+    .vcard img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .vcard h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .vcard p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+    }
+
+    .contact-info div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f0f0f0;
+      padding: 8px 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+    }
+
+    .copy-btn {
+      background: #007bff;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #0056b3;
+    }
+
+    .status {
+      font-size: 12px;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="vcard">
+  <img src="https://via.placeholder.com/100" alt="Your Photo">
+  <h2>Gagan Kaushik (Sky Infotech)</h2>
+  <p>IT Professional | Najafgarh, NewDelhi</p>
+
+  <div class="contact-info">
+    <div>
+      <span>Email: sky.infotech@yahoo.com</span>
+      <button class="copy-btn" onclick="copyToClipboard('sky.infotech@yahoo.com')">Copy</button>
+    </div>
+    <div>
+      <span>Phone: +91-9210822700</span>
+      <button class="copy-btn" onclick="copyToClipboard('+91-9210822700')">Copy</button>
+    </div>
+  </div>
+    
+<a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AFN%3AAnkush%20(Sleek%20Print)%0ATITLE%3AManager%0AORG%3ASleek%20Print%0AEMAIL%3Ainfo%40sleekprint.com%0ATEL%3A%2B91-9999199849%0AADR%3A%3B%3BDelhi%2C%20India%0AEND%3AVCARD" 
+   download="files/contact.vcf"
+   class="save-contact-btn">
+  Save as Contact
+</a>
+
+  <div class="status" id="status"></div>
+</div>
+
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const status = document.getElementById('status');
+      status.textContent = `Copied: ${text}`;
+      setTimeout(() => status.textContent = '', 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
