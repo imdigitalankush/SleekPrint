@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>vCard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .vcard {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      text-align: center;
+      width: 300px;
+    }
+
+    .vcard img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .vcard h2 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .vcard p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .contact-info {
+      margin-top: 15px;
+    }
+
+    .contact-info div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f0f0f0;
+      padding: 8px 12px;
+      margin-top: 8px;
+      border-radius: 8px;
+    }
+
+    .copy-btn {
+      background: #007bff;
+      border: none;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .copy-btn:hover {
+      background: #0056b3;
+    }
+
+    .status {
+      font-size: 12px;
+      color: green;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="vcard">
+  <img src="https://via.placeholder.com/100" alt="Your Photo">
+  <h2>Ankush Kumar</h2>
+  <p>Software Engineer | Noida, India</p>
+
+  <div class="contact-info">
+    <div>
+      <span>Email: ankush@example.com</span>
+      <button class="copy-btn" onclick="copyToClipboard('ankush@example.com')">Copy</button>
+    </div>
+    <div>
+      <span>Phone: +91-9876543210</span>
+      <button class="copy-btn" onclick="copyToClipboard('+919876543210')">Copy</button>
+    </div>
+  </div>
+
+  <div class="status" id="status"></div>
+</div>
+
+<script>
+  function copyToClipboard(text) {
+    navigator.clipboard.writeText(text).then(() => {
+      const status = document.getElementById('status');
+      status.textContent = `Copied: ${text}`;
+      setTimeout(() => status.textContent = '', 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
