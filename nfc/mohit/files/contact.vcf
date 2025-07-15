@@ -1,9 +1,10 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Ankush (Sleek Print)
-TITLE:Manager
-ORG:Sleek Print
-EMAIL:info@sleekprint.com
-TEL:+91-9999199849
-ADR:;;Delhi, India
+FN:Adv. Mohit Kumar
+N:Kumar;Mohit;;Adv.;
+TITLE:Advocate
+ORG:Neeraj Jai Kumar and Company
+EMAIL;TYPE=INTERNET:tax900@gmail.com
+TEL;TYPE=CELL:+91-9716393638
+NOTE:BA, LL.B.
 END:VCARD
