@@ -23,22 +23,7 @@
       text-align: center;
       width: 300px;
     }
-.save-contact-btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #28a745;
-  color: white;
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  transition: background 0.3s;
-    width: 90%;
-}
 
-.save-contact-btn:hover {
-  background: #218838;
-}
     .vcard img {
       width: 100px;
       height: 100px;
@@ -85,6 +70,55 @@
       background: #0056b3;
     }
 
+    .save-contact-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background: #28a745;
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: background 0.3s;
+      width: 90%;
+    }
+
+    .save-contact-btn:hover {
+      background: #218838;
+    }
+
+    .google-review {
+      margin-top: 15px;
+    }
+
+    .google-review img {
+      width: 120px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    .locations {
+      margin-top: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .location-btn {
+      flex: 1;
+      background: #343a40;
+      color: white;
+      padding: 8px 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 13px;
+      transition: background 0.3s;
+    }
+
+    .location-btn:hover {
+      background: #23272b;
+    }
+
     .status {
       font-size: 12px;
       color: green;
@@ -95,7 +129,7 @@
 <body>
 
 <div class="vcard">
-<img src="files/photo.jpg" alt="Your Photo">
+  <img src="files/photo.jpg" alt="Your Photo">
   <h2>Gagan Kaushik (Sky Infotech)</h2>
   <p>IT Professional | Najafgarh, New Delhi</p>
 
@@ -109,12 +143,21 @@
       <button class="copy-btn" onclick="copyToClipboard('+91-9210822700')">Copy</button>
     </div>
   </div>
-    
-<a href="files/contact.vcf" 
-   download="contact.vcf" 
-   class="save-contact-btn">
-  Save as Contact
-</a>
+
+  <a href="files/contact.vcf" download="contact.vcf" class="save-contact-btn">
+    Save as Contact
+  </a>
+
+  <div class="google-review">
+    <a href="https://www.google.com/search?q=sky+infotech+najafgarh+reviews" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Review">
+    </a>
+  </div>
+
+  <div class="locations">
+    <a href="https://maps.google.com/?q=Najafgarh" target="_blank" class="location-btn">Najafgarh</a>
+    <a href="https://maps.google.com/?q=Gurgaon" target="_blank" class="location-btn">Gurgaon</a>
+  </div>
 
   <div class="status" id="status"></div>
 </div>
